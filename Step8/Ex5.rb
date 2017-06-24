@@ -17,7 +17,7 @@ def input_students
     puts "What is your Hobby?"
     hobbies = gets.chomp
 
-    students << {name: name, cOb: country_of_birth, height: height, hobbies: hobbies, cohort: :cohort}
+    students << {name: name, cOb: country_of_birth, height: height, hobbies: hobbies, cohort: :november}
     puts "Now we have #{students.count} students"
     #get another name from the user
     name = gets.chomp
@@ -33,12 +33,15 @@ end
 
 #with help from ana's hint i used the each_with_index hint!
 def print(students)
-  #print  using until loop
   students.each_with_index do |student, index|
-    puts "#{index+1}: Name:#{students[:name]} COB:#{country_of_birth[:cOb]} Height:#{height[:height]} Hobbies: #{hobbies[:hobbies]}(#{students[:cohort]} cohort)"
+    puts "#{index+1} Name:#{student[:name]}\n
+    COB:#{student[:cOb]}\n
+    Height:#{student[:height]}\n
+    Hobbies: #{student[:hobbies]}\n
+    Cohort:#{student[:cohort]}"
   end
 end
-#NOT WORKING WHYYYYYYYY!!!!!?
+#i know why now!
 
 
 def print_footer(students)
